@@ -1,4 +1,4 @@
-/* Basic Body Styling */
+/* Lesson 4.3.2: Basic Body Styling */
 body {
     background-color: #000000; /* Black background */
     color: #bebebe;           /* Gray text */
@@ -6,12 +6,12 @@ body {
     margin: 0;
 }
 
-/* Centering Semantic Containers */
+/* Lesson 4.3.3: Centering Semantic Containers */
 header, nav, main, footer, #content {
     text-align: center;
 }
 
-/* Navigation Styling */
+/* Lesson 4.4.4: Navigation Styling */
 nav {
     padding: 20px;
 }
@@ -25,8 +25,8 @@ nav a {
 
 /* Pseudo-class for hover effect */
 nav a:hover {
-    background-color: #efb21e; /* Gold */
-    color: #002649;            /* Blue */
+    background-color: #efb21e; /* CSUMB Gold */
+    color: #002649;            /* CSUMB Blue */
     border-radius: 5px;
 }
 
@@ -36,7 +36,7 @@ nav a:hover {
     border-bottom: 3px solid #efb21e;
 }
 
-/* Flexbox for Home Page Side-by-Side */
+/* Lesson 4.4.5: Flexbox for Home Page Side-by-Side */
 main {
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +44,7 @@ main {
     padding: 50px;
 }
 
-/* Table and List Styling */
+/* Lesson 5.5 - 5.9: Table and List Styling */
 table {
     margin: 0 auto; /* Centering block element */
     border-collapse: collapse;
@@ -67,7 +67,7 @@ td {
 
 ul {
     margin: 20px auto;
-    width: 300px; /* center a list block */
+    width: 300px; /* Required to center a list block */
     text-align: left;
 }
 
@@ -76,6 +76,7 @@ ul {
     font-weight: bold;
 }
 
+/* Footer Customization */
 footer {
     font-size: 0.75rem; /* Smaller font */
     color: #888888;    /* Different color from home content */
@@ -84,7 +85,6 @@ footer {
 }
 
 .footer-logo {
-    width: 50px;  
-    height: auto; 
+    width: 50px;  /* Adjust this number (e.g., 50px, 80px) to change size */
+    height: auto;  /* This ensures the image doesn't look stretched or squished */
 }
-
