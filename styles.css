@@ -87,4 +87,25 @@ footer {
 .footer-logo {
     width: 50px;  /* Adjust this number (e.g., 50px, 80px) to change size */
     height: auto;  /* This ensures the image doesn't look stretched or squished */
+
+}
+
+.code-block {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+dl {
+    margin-top: 30px;
+    border-left: 3px solid #efb21e;
+    padding-left: 15px;
+}
+
+dt {
+    font-weight: bold;
+    color: #002649;
 }
