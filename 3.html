@@ -29,8 +29,7 @@
             <p>Configuring database connection pools is often misunderstood, with many developers mistakenly believing that a larger pool leads to better performance.</p>
             <p class="post-meta">Published on <time datetime="2026-03-09">March 9, 2026</time> by Perez</p>
         </header>
-
-<section class="post-content">
+<div class="post-content">
         <p>
 Large pools often degrade performance due to increased context switching and overhead. The core principle of efficient connection pooling is "less is more," as excessive threads beyond the available CPU cores force the operating system to spend time managing thread states rather than executing database transactions.
         </p>
@@ -46,7 +45,7 @@ The primary goal is to maintain a small pool where application threads are natur
         <p>
 Finally, developers must be wary of "pool-locking," a scenario where application-level deadlocks occur because threads require more connections than are available. While increasing the pool size can sometimes bypass these lockups, it is usually a sign of poor application design. Instead of enlarging the pool, developers should calculate the minimum required connections to avoid deadlock or use a Java Transaction Manager (JTA) to manage connections more effectively, keeping the pool size as small and performant as possible.
         </p>
-</section>
+</div>
         <footer class="post-footer">
             <p>Tags: <a href="#">Pool-locking</a>, <a href="#">Database</a></p>
         </footer>
