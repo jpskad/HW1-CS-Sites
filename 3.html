@@ -32,18 +32,22 @@
 
 <section class="post-content">
     <h3>Gaming on Linux</h3>
-    <p>
+        <p>
 Large pools often degrade performance due to increased context switching and overhead. The core principle of efficient connection pooling is "less is more," as excessive threads beyond the available CPU cores force the operating system to spend time managing thread states rather than executing database transactions.
-
+        </p>
+        <p>
 Performance is largely constrained by hardware resources: CPU, disk, and network. While a single CPU core is theoretically most efficient when handling a number of threads equal to its core count, blocking I/O operations (such as disk seek times or network latency) mean that having slightly more connections than cores can improve throughput. However, modern technologies like SSDs reduce I/O wait times, which actually pushes the optimal connection count closer to the physical core count, contradicting the common impulse to increase pool sizes on faster hardware.
-
+        </p>
+        <p>
 A well-regarded formula for calculating an optimal starting point is connections = ((core_count * 2) + effective_spindle_count). For example, on a 4-core server with one hard disk, a pool size of 10 is usually sufficient to handle thousands of users. If performance begins to plateau or degrade during load testing, it is often a signal that the pool size is too high, causing the database and application to fight for resources rather than processing queries efficiently.
-
+        </p>
+        <p>
 The primary goal is to maintain a small pool where application threads are naturally saturated while waiting for available connections. If you have thousands of front-end users, the connection pool itself should only ever consist of a few dozen connections at most. The remaining application threads should simply wait in a queue for a connection to become available, ensuring that the database is never overwhelmed by more concurrent requests than it is capable of processing.
-
-Finally, developers must be wary of "pool-locking," a scenario where application-level deadlocks occur because threads require more connections than are available. While increasing the pool size can sometimes bypass these lockups, it is usually a sign of poor application design. Instead of enlarging the pool, developers should calculate the minimum required connections to avoid deadlock or use a Java Transaction Manager (JTA) to manage connections more effectively, keeping the pool size as small and performant as possible.</p>
-    </section>
-
+        </p>
+        <p>
+Finally, developers must be wary of "pool-locking," a scenario where application-level deadlocks occur because threads require more connections than are available. While increasing the pool size can sometimes bypass these lockups, it is usually a sign of poor application design. Instead of enlarging the pool, developers should calculate the minimum required connections to avoid deadlock or use a Java Transaction Manager (JTA) to manage connections more effectively, keeping the pool size as small and performant as possible.
+        </p>
+</section>
         <footer class="post-footer">
             <p>Tags: <a href="#">Pool-locking</a>, <a href="#">Database</a></p>
         </footer>
@@ -55,4 +59,3 @@ Finally, developers must be wary of "pool-locking," a scenario where application
     </footer>
 </body>
 </html>
-
