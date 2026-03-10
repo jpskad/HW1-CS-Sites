@@ -33,7 +33,10 @@
         To get the most out of a high-performance system like Linux Mint, it helps to understand the hardware layer beneath it. At the heart of CPU performance lies the <strong>cache line</strong>, typically 64 bytes in size. This is the smallest unit of data that the CPU can fetch from main memory (RAM) into its high-speed cache. When your processor needs a piece of information, it doesn't just grab a single byte; it pulls an entire cache line to ensure that subsequent, related instructions are already waiting in the fast lane, minimizing the latency that often bottlenecks system performance. 
         </p>
         <p>
-            On a Linux system, how your applications interact with these cache lines can significantly impact execution speed. Developers often optimize code through a process called <em>cache alignment</em>, ensuring that frequently accessed data structures fall neatly within these 64-byte boundaries. When data is properly aligned, the CPU avoids the "cache miss" penalty, the time-consuming wait for data to be fetched from slower RAM. Understanding these hardware fundamentals is a powerful step for anyone looking to transition from a casual Linux user to a power user or systems programmer. 
+        On a Linux system, how your applications interact with these cache lines can significantly impact execution speed. Developers often optimize code through a process called <em>cache alignment</em>, ensuring that frequently accessed data structures fall neatly within these 64-byte boundaries. When data is properly aligned, the CPU avoids the "cache miss" penalty, the time-consuming wait for data to be fetched from slower RAM. Understanding these hardware fundamentals is a powerful step for anyone looking to transition from a casual Linux user to a power user or systems programmer. 
+        </p>
+        </p>
+        By highlighting how extra pointers in a doubly linked list can reduce data density and lead to unnecessary cache evictions, the video emphasizes the importance of selecting efficient data structures to minimize "cache misses" and optimize execution speed.
         </p>
     <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/dYhvbDULJvc" 
