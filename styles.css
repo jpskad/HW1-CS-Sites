@@ -1,4 +1,4 @@
-/* Lesson 4.3.2: Basic Body Styling */
+/* Basic Body Styling */
 body {
     background-color: #000000; /* Black background */
     color: #bebebe;           /* Gray text */
@@ -6,12 +6,12 @@ body {
     margin: 0;
 }
 
-/* Lesson 4.3.3: Centering Semantic Containers */
+/* Centering Semantic Containers */
 header, nav, main, footer, #content {
     text-align: center;
 }
 
-/* Lesson 4.4.4: Navigation Styling */
+/* Navigation Styling */
 nav {
     padding: 20px;
 }
@@ -36,7 +36,7 @@ nav a:hover {
     border-bottom: 3px solid #efb21e;
 }
 
-/* Lesson 4.4.5: Flexbox for Home Page Side-by-Side */
+/* Flexbox for Home Page Side-by-Side */
 main {
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +44,7 @@ main {
     padding: 50px;
 }
 
-/* Lesson 5.5 - 5.9: Table and List Styling */
+/* Table and List Styling */
 table {
     margin: 0 auto; /* Centering block element */
     border-collapse: collapse;
@@ -85,7 +85,7 @@ footer {
 }
 
 .footer-logo {
-    width: 50px;  /* Adjust this number (e.g., 50px, 80px) to change size */
+    width: 50px; 
     height: auto;  /* This ensures the image doesn't look stretched or squished */
 
 }
@@ -109,3 +109,4 @@ dt {
     font-weight: bold;
     color: #002649;
 }
+
