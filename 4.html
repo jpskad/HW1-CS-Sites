@@ -34,9 +34,11 @@
     <h3>Gaming on Linux</h3>
     <p>
 The belief that "Dynamic SQL is slow" is a persistent myth in database development, but it oversimplifies how database engines handle execution. In reality, dynamic SQL is not inherently slower than static SQL. The performance of any SQL statement depends primarily on whether the database engine can reuse an existing execution plan. If the engine receives the exact same query text repeatedly, it can use the cached plan regardless of whether that text was hardcoded as static SQL or generated dynamically by an application at runtime.
-
+    </p>
+    <p>
 The myth often gains traction because developers frequently misuse dynamic SQL in ways that actively hinder performance. A common mistake is generating query strings that include literal values (e.g., WHERE id = 123 instead of WHERE id = ?). When values are concatenated directly into the string, the query text changes with every execution, forcing the database to "hard parse" and generate a new execution plan every time. This excessive plan compilation creates significant overhead, which makes the dynamic approach appear slow compared to static, parameterized queries that benefit from plan reuse.
-
+    </p>
+    <p>
 Ultimately, the goal for high-performance SQL—whether dynamic or static—is to provide a stable, reusable query structure. When dynamic SQL is implemented using bind variables or parameterized placeholders, the database engine sees a consistent template that allows for effective plan caching and optimization. By focusing on parameterized inputs, developers can enjoy the flexibility of dynamic SQL without sacrificing the performance benefits of a well-cached execution plan, effectively debunking the idea that the dynamic nature of the code itself is the cause of poor performance.
     </p>
     </section>
